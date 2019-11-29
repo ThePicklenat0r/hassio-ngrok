@@ -4,7 +4,7 @@ resources:
   repositories:
     - repository: templates
       type: github
-      name: ThePicklenat0r/azp-templates
+      name: ThePicklenat0r/templates
       endpoint: ThePicklenat0r
 
 trigger:
@@ -19,7 +19,7 @@ variables:
   - group: docker
 
 stages:
-- template: /hassio-addons/azp-release-addon.yml@templates
+- template: /azure/hassio-addons/azp-release-addon.yml@templates
   parameters:
     addon: 'ngrok'
     arch: '--all'
