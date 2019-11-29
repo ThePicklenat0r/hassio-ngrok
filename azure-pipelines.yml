@@ -20,7 +20,7 @@ variables:
   - group: github
 
 stages:
-- template: /azure/hassio-addons/azp-release-addon.yml@templates
+- template: /azp/hassio-addons/azp-release-addon.yml@templates
   parameters:
     addon: 'ngrok'
     arch: '--all'
