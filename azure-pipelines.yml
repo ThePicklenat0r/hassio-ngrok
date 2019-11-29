@@ -18,9 +18,8 @@ variables:
     value: '6.6'
   - group: docker
 
-
-jobs:
-- template: /hassio-addons/azp-template-addon.yml@azp-templates
+Stages:
+- template: /hassio-addons/azp-release-addon.yml@azp-templates
   parameters:
     addon: 'ngrok'
     arch: '--all'
