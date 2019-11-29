@@ -17,9 +17,11 @@ variables:
   - name: versionBuilder
     value: '6.6'
   - group: docker
+  - group: github
 
 stages:
 - template: /azure/hassio-addons/azp-release-addon.yml@templates
   parameters:
     addon: 'ngrok'
     arch: '--all'
+    repo: 'hassio-ngrok'
