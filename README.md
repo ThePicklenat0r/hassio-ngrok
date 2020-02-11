@@ -27,21 +27,20 @@ forward, do not use this addon.
 
 Example add-on configuration:
 
-```json
-{
-  "log_level": "info",
-  "auth_token": "my-auth-token",
-  "region": "us",
-  "tunnels":
-    [
-      {
-        "name": "hass",
-        "proto": "tls",
-        "addr": 8123,
-        "hostname": "home.example.com"
-      }
-    ]
-}
+```yaml
+  log_level: info
+  auth_token: my-auth-token
+  region: us
+  tunnels:
+    - name: hass
+      proto: tls
+      addr: 8123
+      hostname: home.example.com
+    - name: lets-encrypt
+      proto: http
+      addr: 80
+      bind_tls: false
+      hostname: home.example.com
 ```
 
 ### Option: `auth_token`
