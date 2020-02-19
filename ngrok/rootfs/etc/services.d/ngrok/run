@@ -1,3 +1,5 @@
 #!/usr/bin/with-contenv bashio
 
-exec /usr/bin/ngrok.sh
+bashio::log.info "Starting ngrok..."
+
+exec ngrok start --config /ngrok-config/ngrok.yml --all
