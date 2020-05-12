@@ -121,6 +121,10 @@ jobs:
             echo "  Copying README.md"
             cp $workspace/README.md README.md
           fi
+          if [ -f $workspace/DOCS.md ]; then
+            echo "  Copying DOCS.md"
+            cp $workspace/DOCS.md DOCS.md
+          fi
           if [ -f "$workspace/$addon/CHANGELOG.md" ]; then
             echo "  Copying CHANGELOG.md"
             cp $workspace/$addon/CHANGELOG.md CHANGELOG.md
